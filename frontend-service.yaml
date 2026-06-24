@@ -3,13 +3,12 @@ kind: Service
 
 metadata:
   name: netflix-frontend-service
+  namespace: default
 
 spec:
   type: NodePort
-
   selector:
     app: netflix-frontend
-
   ports:
   - port: 80
     targetPort: 80

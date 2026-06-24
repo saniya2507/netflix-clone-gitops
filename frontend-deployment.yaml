@@ -3,26 +3,21 @@ kind: Deployment
 
 metadata:
   name: netflix-frontend
+  namespace: default
 
 spec:
   replicas: 2
-
   selector:
     matchLabels:
       app: netflix-frontend
-
   template:
     metadata:
       labels:
         app: netflix-frontend
-
     spec:
       containers:
       - name: netflix-frontend
-
         image: saniyagandhi2507/netflix-frontend:v1
-
         imagePullPolicy: Always
-
         ports:
         - containerPort: 80
